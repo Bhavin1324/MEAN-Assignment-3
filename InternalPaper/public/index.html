@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle dashboard</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container my-5">
+        <h2 class="mb-3">Create vechicle</h2>
+        <form>
+            <div class="mb-3">
+                <label for="branch" class="form-label">Brand name</label>
+                <input type="text" class="form-control" id="brand">
+            </div>
+            <div class="form-floating mb-3">
+                <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                </select>
+                <label for="floatingSelect">Select Vechicle Category</label>
+            </div>
+            <div class="mb-3">
+                <label for="formFile" class="form-label">Upload picture</label>
+                <input class="form-control" name="image" type="file" id="formFile">
+            </div>
+            <div class="mb-3">
+                <label for="pirce" class="form-label">Price</label>
+                <input type="number" class="form-control" id="price">
+            </div>
+            <div class="mb-3">
+                <label for="depreciation" class="form-label">Depreciation rate</label>
+                <input type="number" class="form-control" id="depreciation">
+            </div>
+            <div class="mb-3">
+                <label for="noy" class="form-label">Number of years (used)</label>
+                <input type="number" class="form-control" id="noy">
+            </div>
+            <div class="mb-3">
+                <label for="totprice" class="form-label">Total price</label>
+                <input type="number" class="form-control" id="totprice" readonly>
+            </div>
+            <button type="submit" id="submit" class="btn btn-primary">Insert</button>
+        </form>
+    </div>
+    <div class="container mt-2">
+        <h2 class="mb-4">Vechicle dashboard</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Brand</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Picture</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Depreciation</th>
+                    <th scope="col">Number of years</th>
+                    <th scope="col">Total price</th>
+                    <th colspan="2"></th>
+                </tr>
+            </thead>
+            <tbody class="tableBody">
+            </tbody>
+        </table>
+    </div>
+</body>
+<script src="js/bootstrap.bundle.js"></script>
+<script src="./index.js"></script>
+
+</html>
