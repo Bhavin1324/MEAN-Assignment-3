@@ -1,0 +1,32 @@
+<div class="row my-2">
+  <div class="col-md-4 m-2">
+    <ul class="list-group" *ngFor="let item of items">
+      <li class="list-group-item">{{ item }}</li>
+    </ul>
+  </div>
+  <div class="col-md-4 m-2">
+    <div class="form-floating">
+      <select
+        class="form-select"
+        id="floatingSelect"
+        aria-label="Floating label select example"
+        (change)="onChange($event)"
+      >
+        <option *ngFor="let i of items" [value]="i">
+          {{ i }}
+        </option>
+      </select>
+      <label for="floatingSelect">Works with selects</label>
+    </div>
+  </div>
+  <div class="col-md-3 m-2">
+    <label for="item" class="form-label">Gorssary Item</label>
+    <input
+      type="text"
+      class="form-control"
+      id="item"
+      [(ngModel)]="currentItem"
+      readonly
+    />
+  </div>
+</div>

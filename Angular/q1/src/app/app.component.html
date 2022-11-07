@@ -1,0 +1,29 @@
+<div class="container mt-4">
+  <ul class="nav nav-pills">
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        aria-current="page"
+        routerLink="/"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Home</a
+      >
+    </li>
+    <li class="nav-item">
+      <a
+        class="nav-link"
+        href="#"
+        routerLink="/userform"
+        routerLinkActive="active"
+        >User</a
+      >
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#" routerLink="/list" routerLinkActive="active"
+        >List</a
+      >
+    </li>
+  </ul>
+  <router-outlet></router-outlet>
+</div>
