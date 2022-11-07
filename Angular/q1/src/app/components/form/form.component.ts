@@ -23,8 +23,6 @@ export class FormComponent implements OnInit {
 
   ngOnInit(): void {}
   onSubmit() {
-    console.log(this.userform.value);
-    console.log(this.userform.controls['email']);
     if (this.userform.controls['email'].status === 'VALID') {
       this.username = this.userform.value.username;
       this.email = this.userform.value.email;

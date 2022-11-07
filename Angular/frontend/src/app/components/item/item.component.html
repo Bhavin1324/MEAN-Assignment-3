@@ -1,0 +1,29 @@
+<div class="row mt-4">
+  <div class="col-xs-12">
+    <div class="alert alert-success" role="alert" *ngIf="success">
+      Product deleted successfully
+      <button
+        type="submit"
+        class="btn btn-success mx-2 pull-right"
+        (click)="gotoHome()"
+      >
+        Home
+      </button>
+    </div>
+    <div class="card" *ngIf="!success">
+      <h5 class="card-header">{{ product.category }}</h5>
+      <div class="card-body">
+        <h4 class="card-title">{{ product.name }}</h4>
+        <h6 class="card-text text-secondary">
+          {{ product.description }}
+        </h6>
+        <div class="card-text">
+          <div class="mb-1">Price: {{ product.price }}</div>
+          <div class="mb-3">quantity: {{ product.quantity }}</div>
+        </div>
+        <button (click)="onDelete()" class="btn btn-danger">Delete</button>
+        <button (click)="gotoHome()" class="btn btn-primary ms-2">Home</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,71 @@
+<div class="row">
+  <div class="col-xs-12">
+    <div class="alert alert-success" role="alert" *ngIf="success">
+      Product updated successfully
+    </div>
+    <h3 class="my-4">Edit product - {{ product.name }}</h3>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <form [formGroup]="userForm" (submit)="onSubmit()">
+      <div class="mb-3">
+        <label for="name" class="form-label">Product name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          formControlName="name"
+          [ngModel]="product.name"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="category" class="form-label">Product category</label>
+        <input
+          type="text"
+          class="form-control"
+          id="category"
+          formControlName="category"
+          [ngModel]="product.category"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="price" class="form-label">Product price</label>
+        <input
+          type="number"
+          class="form-control"
+          id="price"
+          formControlName="price"
+          [ngModel]="product.price"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="description" class="form-label">Product description</label>
+        <input
+          type="text"
+          class="form-control"
+          id="description"
+          formControlName="description"
+          [ngModel]="product.description"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="quantity" class="form-label">Product quantity</label>
+        <input
+          type="number"
+          class="form-control"
+          id="quantity"
+          formControlName="quantity"
+          [ngModel]="product.quantity"
+        />
+      </div>
+
+      <button type="submit" class="btn btn-outline-success">
+        Update product
+      </button>
+      <button type="submit" class="btn btn-primary ms-2" (click)="gotoHome()">
+        Home
+      </button>
+    </form>
+  </div>
+</div>
